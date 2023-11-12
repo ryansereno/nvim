@@ -8,7 +8,7 @@ require'nvim-web-devicons'.setup {
     color = "#428850",
     cterm_color = "65",
     name = "Zsh"
-  }
+  },
  };
  -- globally enable different highlight colors per icon (default to true)
  -- if set to false all icons will have the default icon's color
@@ -37,6 +37,12 @@ require'nvim-web-devicons'.setup {
     icon = "",
     color = "#81e043",
     name = "Log"
+  },
+
+  ["vue"] = {
+    icon = "﵂",
+    color = "#81e043",
+    name = "Vue"
   }
  };
 }
