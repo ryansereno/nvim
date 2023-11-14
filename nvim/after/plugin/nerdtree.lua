@@ -1,1 +1,4 @@
-vim.api.nvim_set_keymap('n', '<leader>t', ':w<CR>:NERDTree<CR>', { noremap = true, silent = true })
+require("nvim-tree").setup {}
+
+vim.api.nvim_set_keymap('n', '<leader>t', ':w<CR>:NvimTreeOpen<CR>', { noremap = true, silent = true })
+
