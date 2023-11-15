@@ -119,11 +119,6 @@ _G.packer_plugins = {
     path = "/Users/ryan/.local/share/nvim/site/pack/packer/start/moonlight.nvim",
     url = "https://github.com/shaunsingh/moonlight.nvim"
   },
-  nerdtree = {
-    loaded = true,
-    path = "/Users/ryan/.local/share/nvim/site/pack/packer/start/nerdtree",
-    url = "https://github.com/preservim/nerdtree"
-  },
   ["night-owl.nvim"] = {
     loaded = true,
     path = "/Users/ryan/.local/share/nvim/site/pack/packer/start/night-owl.nvim",
@@ -143,6 +138,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ryan/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "/Users/ryan/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -178,6 +178,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ryan/.local/share/nvim/site/pack/packer/start/prettier.nvim",
     url = "https://github.com/MunifTanjim/prettier.nvim"
+  },
+  ["synthwave84.nvim"] = {
+    loaded = true,
+    path = "/Users/ryan/.local/share/nvim/site/pack/packer/start/synthwave84.nvim",
+    url = "https://github.com/lunarvim/synthwave84.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,

@@ -10,6 +10,7 @@ SPOTIFY_EVENT="com.spotify.client.PlaybackStateChanged"
 POPUP_CLICK_SCRIPT="sketchybar --set \$NAME popup.drawing=toggle"
 ACTIVE_SPACE=$(yabai -m query --spaces --space | jq '.index')
 SPACE_ICONS=("$GHOST" "$GHOST" "$GHOST" "$GHOST" "$GHOST" "$GHOST" "$GHOST" "$GHOST")
+sketchybar --hotload true
 
 bar=(
   height=40
@@ -144,7 +145,7 @@ spotify=(
   popup.height=100
   icon=$SPOTIFY
   icon.color=$GREEN
-  icon.padding_right=15
+  icon.padding_right=13
   icon.padding_left=15
   background.color=$TEMPUS
   background.height=19
@@ -269,8 +270,8 @@ current_space=(
   click_script="$POPUP_CLICK_SCRIPT"
 )
 
-sketchybar --add item current_space left \
-  --set current_space "${current_space[@]}"
+#sketchybar --add item current_space left \
+  #--set current_space "${current_space[@]}"
 
 brackets=(
   background.color=$STATUS

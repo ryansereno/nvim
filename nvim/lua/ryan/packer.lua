@@ -49,4 +49,6 @@ return require('packer').startup(function(use)
   use "EdenEast/nightfox.nvim" --color scheme
   use "folke/tokyonight.nvim" --color scheme
   use 'shaunsingh/moonlight.nvim' --color scheme
+  use "lunarvim/synthwave84.nvim"
+  use 'norcalli/nvim-colorizer.lua'
 end)
