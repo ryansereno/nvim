@@ -20,5 +20,3 @@ require("nvim-tree").setup {
   ---
 }
 
--- Global mapping to open nvim-tree with '\t'
-vim.api.nvim_set_keymap('n', '<leader>t', ':w<CR>:NvimTreeOpen<CR>', { noremap = true, silent = true })

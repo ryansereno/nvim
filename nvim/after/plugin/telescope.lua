@@ -1,4 +1,6 @@
 local builtin = require('telescope.builtin')
+
+-- open telescope fuzzy find with cntrl p or file find with \ff
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.api.nvim_set_keymap('n', '<C-p>', '<cmd>lua require("telescope.builtin").live_grep()<CR>', { noremap = true, silent = true })
 

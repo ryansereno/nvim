@@ -25,3 +25,20 @@ vim.o.smartcase = true
 -- Enables syntax highlighting in Vim
 vim.cmd('syntax on')
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
