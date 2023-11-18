@@ -49,7 +49,7 @@ time=(
   label.font="SF Pro:Bold:14.0"
   label.padding_left=20
   label.padding_right=15
-  background.corner_radius=10
+  background.corner_radius=20
   background.color=$TEMPUS
   background.height=25 #19
   background.padding_left=-10
@@ -68,7 +68,7 @@ date=(
   label.padding_left=15
   background.color=$TEMPUS
   background.height=25 #19
-  background.corner_radius=10
+  background.corner_radius=20
 )
 
 sketchybar --add item date right \
@@ -149,7 +149,7 @@ spotify=(
   icon.padding_left=15
   background.color=$TEMPUS
   background.height=25 #19
-  background.corner_radius=10
+  background.corner_radius=20
   background.padding_left=3
   background.padding_right=3
   script="$PLUGIN_DIR/spotify.sh"
@@ -181,7 +181,7 @@ ram=(
   label.padding_right=15
   label.padding_left=10
   update_freq=60
-  background.corner_radius=10
+  background.corner_radius=20
   background.color=$TEMPUS
   background.height=25 #19
   background.padding_left=-6
@@ -212,7 +212,7 @@ apple=(
   label.padding_left=15
   background.color=$TEMPUS
   background.height=25 #19
-  background.corner_radius=10
+  background.corner_radius=20
   background.padding_left=3
   background.padding_right=3
 )
@@ -231,7 +231,7 @@ space=(
 space_bg=(
   background.color=$SPACEBG
   background.height=25 #19
-  background.corner_radius=50
+  background.corner_radius=20
 )
 
 declare -a spacesArray=()
@@ -263,7 +263,7 @@ current_space=(
   icon.padding_right=15
   background.color=$MIDNIGHT
   background.height=25
-  background.corner_radius=10
+  background.corner_radius=20
   background.border_color=$PURPLE
   background.border_width=3
   background.padding_left=10
