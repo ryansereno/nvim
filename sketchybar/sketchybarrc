@@ -13,7 +13,7 @@ SPACE_ICONS=("$GHOST" "$GHOST" "$GHOST" "$GHOST" "$GHOST" "$GHOST" "$GHOST" "$GH
 sketchybar --hotload true
 
 bar=(
-  height=40
+  height=35
   margin=5
   corner_radius=10
   position=top
@@ -28,7 +28,7 @@ sketchybar --bar "${bar[@]}"
 defaults=(
   updates=when_shown
   icon.drawing=on
-  icon.font="SF Pro:Regular:14.0"
+  icon.font="SF Pro:Regular:20.0"
   icon.color=$WHITE
   label.font="SF Pro:Regular:14.0"
   label.drawing=on
@@ -51,7 +51,7 @@ time=(
   label.padding_right=15
   background.corner_radius=10
   background.color=$TEMPUS
-  background.height=19
+  background.height=25 #19
   background.padding_left=-10
   background.padding_right=3
   background.border_color=$PURPLE
@@ -67,7 +67,7 @@ date=(
   click_script="$POPUP_CLICK_SCRIPT"
   label.padding_left=15
   background.color=$TEMPUS
-  background.height=19
+  background.height=25 #19
   background.corner_radius=10
 )
 
@@ -148,7 +148,7 @@ spotify=(
   icon.padding_right=13
   icon.padding_left=15
   background.color=$TEMPUS
-  background.height=19
+  background.height=25 #19
   background.corner_radius=10
   background.padding_left=3
   background.padding_right=3
@@ -183,7 +183,7 @@ ram=(
   update_freq=60
   background.corner_radius=10
   background.color=$TEMPUS
-  background.height=19
+  background.height=25 #19
   background.padding_left=-6
   background.padding_right=3
   background.border_color=$PURPLE
@@ -211,7 +211,7 @@ apple=(
   label.padding_right=15
   label.padding_left=15
   background.color=$TEMPUS
-  background.height=19
+  background.height=25 #19
   background.corner_radius=10
   background.padding_left=3
   background.padding_right=3
@@ -230,7 +230,7 @@ space=(
 
 space_bg=(
   background.color=$SPACEBG
-  background.height=19
+  background.height=25 #19
   background.corner_radius=50
 )
 
@@ -275,8 +275,8 @@ current_space=(
 
 brackets=(
   background.color=$STATUS
-  background.height=25
-  background.corner_radius=10
+  background.height=35
+  background.corner_radius=20
   background.border_color=$PURPLE
   background.border_width=3
 )
