@@ -25,4 +25,5 @@ vim.keymap.set("x", "p", [["_dP]])
 -- replace all instances of current word with \s
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
-
+-- change github copilot key to cntrl-j
+vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })

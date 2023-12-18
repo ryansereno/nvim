@@ -52,4 +52,5 @@ return require('packer').startup(function(use)
   use "lunarvim/synthwave84.nvim"
   use 'norcalli/nvim-colorizer.lua'
   use 'maxmx03/fluoromachine.nvim'
+  use 'github/copilot.vim'
 end)
