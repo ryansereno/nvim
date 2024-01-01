@@ -1,8 +1,19 @@
 -- open nvim-tree with \t
 vim.api.nvim_set_keymap('n', '<leader>t', ':w<CR>:NvimTreeOpen<CR>', { noremap = true, silent = true })
 
--- Prettier with \p
-vim.api.nvim_set_keymap('n', '<leader>p', ':Prettier<CR>', { noremap = true, silent = false })
+-- File type dependent prettifier with \p
+--vim.api.nvim_set_keymap('n', '<leader>p', ':Prettier<CR>', { noremap = true, silent = false })
+vim.cmd [[
+function! FormatBuffer()
+    if &filetype == 'python'
+        execute '!black %'
+    else
+        execute 'Prettier'
+    endif
+endfunction
+]]
+vim.api.nvim_set_keymap('n', '<leader>p', ':call FormatBuffer()<CR>', { noremap = true, silent = true })
+
 
 -- move visual blocks with J & K
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
