@@ -6,8 +6,10 @@ vim.api.nvim_set_keymap('n', '<leader>t', ':w<CR>:NvimTreeOpen<CR>', { noremap =
 vim.cmd [[
 function! FormatBuffer()
     if &filetype == 'python'
-    	write
+        write
         execute '!black %'
+    elseif &filetype == 'cs'
+        lua vim.lsp.buf.format()
     else
         execute 'Prettier'
     endif
