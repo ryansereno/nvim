@@ -35,22 +35,22 @@ return require('packer').startup(function(use)
 	  }
   }
   use('neovim/nvim-lspconfig') -- default configs for LSP
-  --use "preservim/nerdtree" -- file tree
   use 'nvim-tree/nvim-tree.lua'
   use { 'nvim-lualine/lualine.nvim' } -- bottom info bar
   use "jiangmiao/auto-pairs" -- auto quote and bracket pairs
   use('jose-elias-alvarez/null-ls.nvim') -- injects LSP diagnostics into nvim
   use('MunifTanjim/prettier.nvim') -- prettify code
   use 'folke/trouble.nvim' -- pretty quickFix menu
-  --use 'ryanoasis/vim-devicons' -- enable icons nerdtree
   use 'nvim-tree/nvim-web-devicons' -- enable icons in lualine and telescope; edit ~/.local/share/nvim/site/pack/packer to fix specific icons, like vue
   use { "catppuccin/nvim", as = "catppuccin" } --color scheme
   use("oxfist/night-owl.nvim") --color scheme
   use "EdenEast/nightfox.nvim" --color scheme
   use "folke/tokyonight.nvim" --color scheme
   use 'shaunsingh/moonlight.nvim' --color scheme
-  use "lunarvim/synthwave84.nvim"
+  use "lunarvim/synthwave84.nvim" --color scheme
   use 'norcalli/nvim-colorizer.lua'
-  use 'maxmx03/fluoromachine.nvim'
+  use 'maxmx03/fluoromachine.nvim'--color scheme
   use 'github/copilot.vim'
+  use 'mfussenegger/nvim-dap'
+  use 'rcarriga/nvim-dap-ui'
 end)
