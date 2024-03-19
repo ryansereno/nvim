@@ -1,7 +1,7 @@
 local dap = require('dap')
 local dapui = require("dapui")
 
-require("dapui").setup()
+dapui.setup()
 
 dap.adapters.coreclr = {
   type = 'executable',
@@ -26,13 +26,20 @@ dap.configurations.cs = {
   },
 }
 
---reset layout
-vim.api.nvim_set_keymap(
-  "n", "<leader>dr", "<cmd>lua require('dapui').open({reset = true})<CR>", 
-  { noremap = true }
-)
+--breakpoint icons
+vim.fn.sign_define('DapBreakpoint', { text='🛑', texthl='DapBreakpoint', linehl='DapBreakpoint', numhl='DapBreakpoint' })
+vim.fn.sign_define('DapStopped', { text='▶️', texthl='DapStopped', linehl='DapStopped', numhl='DapStopped' })
 
---auto open & close
+--toggle breakpoint
+vim.api.nvim_set_keymap("n", "<leader>dt", ":DapToggleBreakpoint<CR>", {noremap=true})
+
+-- start debugging
+vim.api.nvim_set_keymap("n", "<leader>dc", ":DapContinue<CR>", {noremap=true})
+
+--reset layout
+vim.api.nvim_set_keymap("n", "<leader>dr", "<cmd>lua require('dapui').open({reset = true})<CR>", { noremap = true })
+
+--auto open & close the UI panes
 dap.listeners.before.attach.dapui_config = function()
   dapui.open()
 end
