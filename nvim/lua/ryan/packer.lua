@@ -52,5 +52,6 @@ return require('packer').startup(function(use)
   use 'maxmx03/fluoromachine.nvim'--color scheme
   use 'github/copilot.vim'
   use 'mfussenegger/nvim-dap'
-  use 'rcarriga/nvim-dap-ui'
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
+  use { 'uloco/bluloco.nvim', requires = { 'rktjmp/lush.nvim' } }
 end)

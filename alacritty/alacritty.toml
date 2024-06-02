@@ -1,0 +1,73 @@
+# Font configuration
+[font]
+size = 16.0
+[font.normal]
+family = "Cascursive"
+style = "Regular"
+
+# Colors (Defining a simple color scheme that supports 256 colors)
+
+# Window configuration (Hiding window decorations)
+[window]
+#decorations = "none"
+opacity = 0.8
+
+# Environment variables (for enabling 256-color support in applications like Vim)
+[env]
+TERM = "xterm-256color"
+
+
+# Night Owl Theme Configuration
+
+# Primary colors
+[colors.primary]
+background = "#011627"
+foreground = "#d6deeb"
+
+# Cursor colors
+[colors.cursor]
+text = "CellBackground"
+cursor = "CellForeground"
+
+# Vi mode cursor colors
+[colors.vi_mode_cursor]
+text = "CellBackground"
+cursor = "#22da6e"
+
+# Selection colors
+[colors.selection]
+text = "#ffffff"
+background = "#0d486e"
+
+# Search colors
+[colors.search.matches]
+foreground = "#000000"
+background = "#22da6e"
+[colors.search.focused_match]
+foreground = "#ffffff"
+background = "#22da6e"
+# [colors.search.bar]
+# foreground = "#ffffff"
+# background = "#1d3b53"
+
+# Normal colors
+[colors.normal]
+black = "#011627"
+red = "#EF5350"
+green = "#22da6e"
+yellow = "#c5e478"
+blue = "#82AAFF"
+magenta = "#C792EA"
+cyan = "#21c7a8"
+white = "#ffffff"
+
+# Bright colors
+[colors.bright]
+black = "#575656"
+red = "#EF5350"
+green = "#22da6e"
+yellow = "#ffeb95"
+blue = "#82AAFF"
+magenta = "#C792EA"
+cyan = "#7fdbca"
+white = "#ffffff"

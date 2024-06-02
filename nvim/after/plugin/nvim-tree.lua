@@ -29,6 +29,9 @@ require("nvim-tree").setup {
       }
     }
   },
+ git = {
+    ignore = false,
+  },
   ---
   on_attach = my_on_attach,
   ---
