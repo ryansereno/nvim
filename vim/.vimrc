@@ -42,14 +42,14 @@ let $FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{nod
 "cntrl-p command for ripgrep/ fzf
 nnoremap <C-p> :Rg<cr>
 
-"let g:polyglot_disabled = ['vue'] "to fix performance issues in .vue files
+let g:polyglot_disabled = ['vue'] "to fix performance issues in .vue files
 
 set re=2 "fix typescript file syntax and freezing
 
 "-----------------Code-Execution--------------------------
-nnoremap <silent> ,<space> :w<cr>:w !python3 %<cr> 
-nnoremap <silent> n<space> :w<cr>:w !node %<cr>
-nnoremap <silent> =<space> :w<cr>:w !gcc % && ./a.out<cr>
+nnoremap <silent> ,<space> :w<cr>:w !python3 %<cr> "execute python code
+nnoremap <silent> n<space> :w<cr>:w !node %<cr> "execute node code
+nnoremap <silent> =<space> :w<cr>:w !gcc % && ./a.out<cr> "execute c code
 "-----------------Code-Execution--------------------------
 
 "-------AirlineStatusLine------
@@ -77,7 +77,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
 Plug 'Yggdroot/indentLine'
 Plug 'jiangmiao/auto-pairs'
-Plug 'uguu-org/vim-matrix-screensaver'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'sheerun/vim-polyglot'
