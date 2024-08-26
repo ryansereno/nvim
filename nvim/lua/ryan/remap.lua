@@ -10,6 +10,9 @@ function! FormatBuffer()
         execute '!black %'
     elseif &filetype == 'cs'
         lua vim.lsp.buf.format()
+    elseif &filetype == 'c'
+        write
+	execute '!clang-format -i %'
     else
         execute 'Prettier'
     endif
@@ -44,5 +47,4 @@ vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true,
  
 -- execute python code
 vim.api.nvim_set_keymap('n', ',<space>', ':w<CR>:w !python3 %<CR>', { noremap = true, silent = false })
-
 

@@ -47,11 +47,9 @@ return require('packer').startup(function(use)
   use "EdenEast/nightfox.nvim" --color scheme
   use "folke/tokyonight.nvim" --color scheme
   use 'shaunsingh/moonlight.nvim' --color scheme
-  use "lunarvim/synthwave84.nvim" --color scheme
   use 'norcalli/nvim-colorizer.lua'
-  use 'maxmx03/fluoromachine.nvim'--color scheme
   use 'github/copilot.vim'
   use 'mfussenegger/nvim-dap'
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
-  use { 'uloco/bluloco.nvim', requires = { 'rktjmp/lush.nvim' } }
+  use "folke/zen-mode.nvim"
 end)
