@@ -14,15 +14,17 @@ dap.configurations.cs = {
 	type = "coreclr",
     request = "launch",
     name = "Launch .NET Core App with DAP",
-    program = "/Users/ryan/Documents/EL4/EL-API/EstimatingLinkAPI/bin/Debug/net8.0/EstimatingLinkAPI.dll",
+    program = "/Users/ryan/Documents/EL4/FL-API/FieldLinkAPI/bin/Debug/net8.0/FieldLinkAPI.dll",
     args = {},
-    cwd = "/Users/ryan/Documents/EL4/EL-API/EstimatingLinkAPI",
+    cwd = "/Users/ryan/Documents/EL4/FL-API/FieldLinkAPI",
     env = {
       ASPNETCORE_ENVIRONMENT = "Development",
       ASPNETCORE_URLS = "https://localhost:7236;http://localhost:5080"
     },
     stopAtEntry = false,
     console = 'integratedTerminal', -- Outputs log to Neovim's terminal
+    externalConsole = true,
+externalConsoleCommand = "iterm2"
   },
 }
 
