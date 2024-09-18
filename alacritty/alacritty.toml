@@ -10,7 +10,7 @@ style = "Regular"
 # Window configuration (Hiding window decorations)
 [window]
 decorations = "none"
-opacity = 0.3
+opacity = 0.4
 
 # Environment variables (for enabling 256-color support in applications like Vim)
 [env]
