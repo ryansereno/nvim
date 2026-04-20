@@ -1,7 +1,10 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
 -- Only required if you have packer configured as `opt`
-vim.cmd [[packadd packer.nvim]]
+local packer_opt_path = vim.fn.stdpath('data') .. '/site/pack/packer/opt/packer.nvim'
+if vim.fn.isdirectory(packer_opt_path) == 1 then
+  vim.cmd [[packadd packer.nvim]]
+end
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
@@ -52,4 +55,6 @@ return require('packer').startup(function(use)
   use 'mfussenegger/nvim-dap'
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
   use "folke/zen-mode.nvim"
+  use { "ellisonleao/gruvbox.nvim" }
+  use {"ember-theme/nvim"}
 end)

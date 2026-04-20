@@ -23,12 +23,12 @@ au! BufNewFile,BufRead *.ejs setf html
 let g:netrw_liststyle = 3
 let g:netrw_winsize = 25
 let g:netrw_preview = 1
-"nnoremap <leader>t :w<CR> :Ex <CR> 
+nnoremap <leader>t :w<CR> :Ex <CR> 
 "nnoremap <leader>T :w<CR> :Ex <CR> :vertical resize 25<CR>
 "
 command! Pret :CocCommand prettier.forceFormatDocument
 let g:user_emmet_leader_key=','
-nnoremap <leader>t :w<CR> :NERDTree<CR>
+"nnoremap <leader>t :w<CR> :NERDTree<CR>
 nnoremap <leader>p :Pret<CR>
 
 "enable select coc autocomplete with enter key
@@ -57,12 +57,6 @@ let g:airline_theme='catppuccin_mocha'
 let g:airline_powerline_fonts = 1
 "-------AirlineStatusLine------
 
-"-------RainbowParentheses------
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-"-------RainbowParentheses------
 "=================RYAN SETTINGS=========================
 
 
@@ -74,11 +68,9 @@ Plug 'neoclide/coc.nvim', { 'branch': 'master', 'do': 'yarn install --frozen-loc
 Plug 'ap/vim-css-color'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'tpope/vim-surround'
 Plug 'Yggdroot/indentLine'
 Plug 'jiangmiao/auto-pairs'
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'kien/rainbow_parentheses.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
