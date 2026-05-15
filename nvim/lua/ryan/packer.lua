@@ -16,9 +16,9 @@ return require('packer').startup(function(use)
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
-  use { -- advanced syntax highlighting
+  use { -- advanced syntax highlighting (main branch = the post-2024 rewrite)
 	  'nvim-treesitter/nvim-treesitter',
-	  run = ':TSUpdate'
+	  branch = 'main',
   }
   -- LSP: native vim.lsp.config (Nvim 0.11+) + Mason for installing servers
   use 'williamboman/mason.nvim'

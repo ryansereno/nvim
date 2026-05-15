@@ -114,11 +114,6 @@ _G.packer_plugins = {
     path = "/Users/ryan/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["minuet-ai.nvim"] = {
-    loaded = true,
-    path = "/Users/ryan/.local/share/nvim/site/pack/packer/start/minuet-ai.nvim",
-    url = "https://github.com/milanglacier/minuet-ai.nvim"
-  },
   ["moonlight.nvim"] = {
     loaded = true,
     path = "/Users/ryan/.local/share/nvim/site/pack/packer/start/moonlight.nvim",

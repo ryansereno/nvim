@@ -3,7 +3,8 @@
 ## Prerequisites
 
 ```sh
-brew install neovim node           # Nvim 0.11+ required; node is for vtsls/vue_ls
+brew install neovim node              # Nvim 0.11+; node for vtsls/vue_ls
+npm install -g tree-sitter-cli        # compiles treesitter parsers (brew's `tree-sitter` is only the C lib, NOT the CLI)
 ```
 
 For C# (omnisharp): install .NET SDK from Microsoft.
@@ -22,7 +23,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim \
 2. `:PackerSync` — installs all plugins.
 3. Quit, reopen nvim.
 4. `:Mason` should auto-install the LSP servers listed in `after/plugin/lsp.lua` (`ensure_installed`). If not, run `:MasonInstall <name>` per missing server.
-5. `:TSUpdate` — install/rebuild treesitter parsers.
+5. Treesitter parsers (from `after/plugin/treesitter.lua`'s `install({...})` list) compile automatically on first launch — may take a minute, progress shows in `:messages`.
 
 ## Mason-installed packages (source of truth)
 

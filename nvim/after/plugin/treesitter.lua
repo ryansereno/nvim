@@ -1,27 +1,21 @@
-require'nvim-treesitter.configs'.setup {
-  -- A list of parser names, or "all" (the five listed parsers should always be installed)
-  ensure_installed = { "javascript", "typescript", "c", "lua", "vim", "vimdoc", "query" },
+-- nvim-treesitter `main` branch (the 2024+ rewrite). No setup{}; just
+-- declare which parsers to install, then start treesitter per-buffer.
 
-  -- Install parsers synchronously (only applied to `ensure_installed`)
-  sync_install = false,
+-- Source of truth for installed parsers. Run :PackerSync after editing.
+require('nvim-treesitter').install({
+  -- core / nvim internals
+  'lua', 'vim', 'vimdoc', 'query',
+  -- LSP hover popups are markdown — needed to avoid parse errors on K
+  'markdown', 'markdown_inline',
+  -- languages you actually use
+  'c', 'javascript', 'typescript', 'tsx', 'vue', 'html', 'css',
+  'python', 'rust', 'json', 'yaml', 'bash',
+})
 
-  -- Automatically install missing parsers when entering buffer
-  -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
-  auto_install = true,
-
-
-  highlight = {
-    enable = true,
-
-    -- NOTE: these are the names of the parsers and not the filetype. (for example if you want to
-    -- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
-    -- the name of the parser)
-    -- Or use a function for more flexibility, e.g. to disable slow treesitter highlight for large files
-
-    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-    -- Using this option may slow down your editor, and you may see some duplicate highlights.
-    -- Instead of true it can also be a list of languages
-    additional_vim_regex_highlighting = false,
-  },
-}
+-- Auto-start treesitter highlight (+ indent) when a buffer's filetype loads.
+-- `pcall` swallows the "parser not installed" error for filetypes we didn't list.
+vim.api.nvim_create_autocmd('FileType', {
+  callback = function(args)
+    pcall(vim.treesitter.start, args.buf)
+  end,
+})
