@@ -20,24 +20,14 @@ return require('packer').startup(function(use)
 	  'nvim-treesitter/nvim-treesitter',
 	  run = ':TSUpdate'
   }
-  use {
-	  -- creates and configures LSP servers
-	  'VonHeikemen/lsp-zero.nvim',
-	  branch = 'v3.x',
-	  requires = {
-		  --- Uncomment these if you want to manage LSP servers from neovim
-		  {'williamboman/mason.nvim'},
-		  {'williamboman/mason-lspconfig.nvim'},
-
-		  -- LSP Support
-		  {'neovim/nvim-lspconfig'},
-		  -- Autocompletion
-		  {'hrsh7th/nvim-cmp'},
-		  {'hrsh7th/cmp-nvim-lsp'},
-		  {'L3MON4D3/LuaSnip'},
-	  }
-  }
-  use('neovim/nvim-lspconfig') -- default configs for LSP
+  -- LSP: native vim.lsp.config (Nvim 0.11+) + Mason for installing servers
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
+  use 'neovim/nvim-lspconfig' -- ships server-specific configs in lsp/
+  -- Autocompletion
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'L3MON4D3/LuaSnip'
   use 'nvim-tree/nvim-tree.lua'
   use { 'nvim-lualine/lualine.nvim' } -- bottom info bar
   use "jiangmiao/auto-pairs" -- auto quote and bracket pairs
@@ -51,7 +41,6 @@ return require('packer').startup(function(use)
   use "folke/tokyonight.nvim" --color scheme
   use 'shaunsingh/moonlight.nvim' --color scheme
   use 'norcalli/nvim-colorizer.lua'
-  use 'github/copilot.vim'
   use 'mfussenegger/nvim-dap'
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
   use "folke/zen-mode.nvim"

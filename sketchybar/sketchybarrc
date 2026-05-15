@@ -156,11 +156,11 @@ spotify=(
   update_freq=5
 )
 
-sketchybar --add event spotify_change $SPOTIFY_EVENT \
-  --add item spotify e \
-  --set spotify "${spotify[@]}" \
-  --subscribe spotify mouse.entered mouse.exited \
-  mouse.exited.global
+# sketchybar --add event spotify_change $SPOTIFY_EVENT \
+#   --add item spotify e \
+#   --set spotify "${spotify[@]}" \
+#   --subscribe spotify mouse.entered mouse.exited \
+#   mouse.exited.global
 
 spotify_label=(
   label="Spotify"
