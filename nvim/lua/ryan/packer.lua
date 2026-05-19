@@ -16,9 +16,10 @@ return require('packer').startup(function(use)
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
-  use { -- advanced syntax highlighting (main branch = the post-2024 rewrite)
+  use { -- advanced syntax highlighting
 	  'nvim-treesitter/nvim-treesitter',
-	  branch = 'main',
+	  branch = 'master',
+	  run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
   -- LSP: native vim.lsp.config (Nvim 0.11+) + Mason for installing servers
   use 'williamboman/mason.nvim'
