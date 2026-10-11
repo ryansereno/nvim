@@ -13,6 +13,9 @@ function! FormatBuffer()
     elseif &filetype == 'c'
         write
 	execute '!clang-format -i %'
+    elseif &filetype == 'rust'
+        write
+	execute '!rustfmt %'
     else
         execute 'Prettier'
     endif
